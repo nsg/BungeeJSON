@@ -69,13 +69,8 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<Object> {
             final ApiRequest ar = new HttpServerApiRequest(((InetSocketAddress) channelHandlerContext.channel().remoteAddress()).getAddress(),
                     params, bodyBuilder.toString());
             try {
-                if (handler.requiresAuthentication() && !BungeeJSONPlugin.getPlugin().getAuthenticationProvider().authenticate(ar, query.path())) {
-                    hrs = HttpResponseStatus.FORBIDDEN;
-                    reply = BungeeJSONUtilities.error("Access denied.");
-                } else {
-                    reply = handler.handle(ar);
-                    hrs = HttpResponseStatus.OK;
-                }
+                reply = handler.handle(ar);
+                hrs = HttpResponseStatus.OK;
             } catch (Throwable throwable) {
                 hrs = HttpResponseStatus.INTERNAL_SERVER_ERROR;
                 reply = BungeeJSONUtilities.error("An internal error has occurred. Information has been logged to the console.");

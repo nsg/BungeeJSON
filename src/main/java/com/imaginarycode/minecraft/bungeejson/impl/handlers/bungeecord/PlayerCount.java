@@ -25,7 +25,7 @@ public class PlayerCount implements RequestHandler {
     @Override
     public Object handle(ApiRequest request) {
         return ImmutableMap.of("current_players", ProxyServer.getInstance().getOnlineCount(), "max_players",
-                ProxyServer.getInstance().getConfig().getPlayerLimit());
+                99);
     }
 
     @Override

@@ -16,8 +16,6 @@
  */
 package com.imaginarycode.minecraft.bungeejson;
 
-import net.md_5.bungee.api.chat.*;
-
 import java.util.Collections;
 import java.util.Map;
 
@@ -34,9 +32,4 @@ public class BungeeJSONUtilities {
         return STATUS_OK;
     }
 
-    public static BaseComponent singletonChatComponent(String text) {
-        TextComponent component = new TextComponent();
-        component.setText(text);
-        return component;
-    }
 }
