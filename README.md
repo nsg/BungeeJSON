@@ -16,3 +16,12 @@ Configuration (was easier to remove)
 I have changed the pom to use 1.6.4-SNAPSHOT of bungeecord-api and bungeecord-config.
 
 It builds with "mvn clean package" and works :)
+
+## License
+
+The following code is a derivative work of the code from minecrafter/BungeeJSON at GitHub,
+which is licensed GPLv3. This code therefore is also licensed under the terms of the
+GNU Public License, verison 3.
+
+Copyright 2013-2014 tuxed <write@imaginarycode.com>
+Copyright 2014 Stefan Berggren <nsg@nsg.cc>
